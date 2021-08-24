@@ -32,10 +32,10 @@ jobs:
     - name: Update(master)
       if: ${{ github.ref == 'refs/heads/master' && github.event_name != 'pull_request' }}
 
-      run: coverage run -a ./getjsonsave.py --release
+      run: coverage run -a getjsonsave.py --release
     - name: Update
       if: ${{ !(github.ref == 'refs/heads/master' && github.event_name != 'pull_request') }}
-      run: coverage run -a ./getjsonsave.py 
+      run: coverage run -a getjsonsave.py 
     - name: commit1
       run: |
         git config --global user.email 1675854623@qq.com
