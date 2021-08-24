@@ -31,11 +31,18 @@ jobs:
       run: python getjsonsave.py
     - name: Update(master)
       if: ${{ github.ref == 'refs/heads/master' && github.event_name != 'pull_request' }}
-
-      run:  python getjsonsave.py
+      run: |
+        git config --global user.email 1675854623@qq.com
+        git config --global user.name marsggbo155
+        git add .
+        git commit -m "update" -a
     - name: Update
       if: ${{ !(github.ref == 'refs/heads/master' && github.event_name != 'pull_request') }}
-      run:  python getjsonsave.py 
+      run: |
+        git config --global user.email 1675854623@qq.com
+        git config --global user.name marsggbo155
+        git add .
+        git commit -m "update" -a 
     - name: commit1
       run: |
         git config --global user.email 1675854623@qq.com
