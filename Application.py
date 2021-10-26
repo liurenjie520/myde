@@ -21,7 +21,7 @@ def updata():
             body1 = "UID:" + item[0] + 'almanac_in_' + config.Default.year + "\n"
             body2 = "DTSTART;VALUE=DATE:" + item[0] + "\nDTEND;VALUE=DATE:" + item[0] + "\n"
             body3 = "SUMMARY:" + item[1] + "\n"
-            tixing0="BEGIN:VALARM"+"\n"+"TRIGGER;VALUE=DATE-TIME:"+item[0]+"T000000Z"+"\n"
+            tixing0="BEGIN:VALARM"+"\n"+"TRIGGER;VALUE=DATE-TIME:"+item[0]+"T-10000Z"+"\n"
             tixing1="ACTION:DISPLAY"+"\n"+"END:VALARM"+"\n"
             body4 = body_string[1]
             full_body = body0 + body1 + body2 + body3 + tixing0 + tixing1 + body4
