@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 0 0 8/1 *' # 定义 cron 表达式
+    - cron: '0 12 * * *' # 定义 cron 表达式
   watch:
     types: [started] # 定义star是自动发送
 
@@ -30,8 +30,8 @@ jobs:
     - name: '开始运行getjsonsave.py'
       run: python getjsonsave.py
 
-    - name: '开始运行bd.py'
-      run: python bd.py
+    - name: '开始运行2Application.py'
+      run: python Application.py
     - name: commit2
       run: |
         git config --global user.email 1438457833@qq.com
